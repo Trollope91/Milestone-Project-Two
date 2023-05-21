@@ -20,6 +20,7 @@ function displayPokemon() {
 
 function checkPokemon() {
   const inputElement = document.getElementById ("pokemon-input")
+  const guess = inputElement.value.toLowerCase();
   const resultElement = Document.getElementById("result")
   
   if (guess === currentPokemon.name) {
@@ -33,6 +34,8 @@ resultElement.textContent = "Wrong, try again!";
       displayPokemon();
     }
 
+currentPokemon = getRandomPokemon();
+displayPokemon();    
 
 
 
