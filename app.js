@@ -14,6 +14,25 @@ function displayPokemon() {
   const imgElement = document.getElementById ("pokemon-img");
   const nameElement = document.getElementById ("pokemon-name")
   imgElement.src = currentPokemon.image
-  nameElement.textConent = "";
+  nameElement.textContent = "";
 
 }
+
+function checkPokemon() {
+  const inputElement = document.getElementById ("pokemon-input")
+  const resultElement = Document.getElementById("result")
+  
+  if (guess === currentPokemon.name) {
+    resultElement.textContent = "It's " + currentPokemon.name + "!";
+  } else {
+resultElement.textContent = "Wrong, try again!";
+  }
+
+  inputElement.value = "";
+      currentPokemon = getRandomPokemon();
+      displayPokemon();
+    }
+
+
+
+
