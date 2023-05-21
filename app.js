@@ -1,0 +1,3 @@
+const pokemon = [
+  {name: "", image: ""}
+]
